@@ -18,6 +18,19 @@
 
  </div>
 
+<div class="form-group">
+<p> <b>tipo_Documento</b> <br>
+    <select class="" name="tipo_Documento">
+      <option value="">tipo_Documento</option>
+      <option value="Nit">Número de Identificación Tributaria</option>
+      <option value="C.c">Cédula de ciudadanía</option>
+      <option value="C.e">Cedula de extranjeria</option>
+      <option value="D.i">Tarjeta de identidad</option>
+      <option value="R.n">Registro de Nacido</option>
+
+    </select>
+</div>
+
 
 <div class="form-group">
   <label class="control-label"for="Nidentificacio">{{'Nidentificacio'}}</label>
@@ -30,7 +43,7 @@
 
 <div class=" form-grou row">
 
-<div .col-xl-4 .col-sm-4 .col-md-4 class="">
+<div class="col md-4">
   <label class="control-label" for="telefono">{{'Telefono'}}</label>
   <input class="form-control {{$errors->has('telefono')?' is-invalid':''}} " type="number" name="telefono"
    value="{{isset($clientes->telefono) ?$clientes->telefono:old('telefono')}}"  id="telefono">
@@ -39,7 +52,7 @@
 
 </div>
 
-<div .col-xl-4  .col-sm-4 .col-md-4 class=>
+<div  class="col md-4">
   <label class="control-label" for="celular1">{{'Celular1'}}</label>
   <input class="form-control {{$errors->has('celular1')?' is-invalid':''}}  " type="number" name="celular1"
   value="{{isset($clientes->celular1)?$clientes->celular1:old('celular1') }}" id="celular1" >
@@ -48,7 +61,7 @@
 
 </div>
 
-<div .col-xl-4 .col-sm-4 .col-md-4 class>
+<div class="col md-4">
   <label class="contro-label"for="celular2">{{'Celular2'}}</label>
   <input class="form-control  {{$errors->has('celular2')?' is-invalid':''}} " type="number" name="celular2"
    value="{{isset($clientes->celular2)?$clientes->celular2:old('celular2')}}" id="celular2" >
@@ -77,6 +90,9 @@
 {!! $errors->first('nombre','<div class="invalid-feedback">:message</div> ') !!}
 
 </div>
+
+
+    </select><br>
 
 <input class="btn btn-success" type="submit" name="" value="{{ $modo =='crear' ?  'Agregar' : 'Modificar'}}">
 <a class="btn btn-primary" href="{{url('clientes')}}">Regresar</a>

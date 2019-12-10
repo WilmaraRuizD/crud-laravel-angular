@@ -21,6 +21,7 @@
     <tr>
       <th>#</th>
       <th>Nombre</th>
+      <th>tipo_Documento</th>
       <th>Nidentificación</th>
       <th>Teléfono</th>
       <th>Celulares</th>
@@ -36,6 +37,7 @@
     <tr>
       <td>{{$loop->iteration}}</td>
       <td>{{$clientes->nombre}} {{$clientes->apellido}}</td>
+      <td></td>
       <td>{{$clientes->Nidentificacion}}</td>
       <td>{{$clientes->telefono}}</td>
       <td>{{$clientes->celular1}} {{$clientes->celular2}}</td>
